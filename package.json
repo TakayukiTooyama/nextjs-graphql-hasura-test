@@ -14,7 +14,8 @@
     "fix:eslint": "yarn lint:eslint --fix",
     "fix:prettier": "yarn lint:prettier --write",
     "test": "jest --env=jsdom --verbose",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen-types": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "*.{ts,tsx}": "yarn fix:eslint",
@@ -31,11 +32,13 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.9",
+    "@apollo/react-hooks": "^4.0.0",
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "@tailwindcss/typography": "^0.5.1",
+    "cross-fetch": "^3.1.5",
     "graphql": "^16.3.0",
-    "next": "^12.0.10",
+    "next": "^12.1.0",
     "next-seo": "^5.1.0",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
@@ -44,6 +47,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/typescript": "^2.4.5",
+    "@graphql-codegen/typescript-operations": "2.3.2",
+    "@graphql-codegen/typescript-react-apollo": "3.2.8",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -67,6 +74,8 @@
     "jest": "^27.5.1",
     "jest-css-modules": "^2.1.0",
     "lint-staged": ">=10",
+    "msw": "^0.38.1",
+    "next-page-tester": "^0.30.0",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
