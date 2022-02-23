@@ -3,3 +3,4 @@
 **/.next/*
 /.eslintrc.js
 /tailwind.config.js
+/src/types/generated/graphql.tsx
