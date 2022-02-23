@@ -2,9 +2,7 @@
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
-  rewrites: async () => {
-    return [{ source: "/", destination: "/root" }];
-  },
+  rewrites: async () => [{ source: "/", destination: "/root" }],
   future: { strictPostcssConfiguration: true },
   pageExtensions: ["page.tsx", "page.ts"],
   i18n: { locales: ["ja"], defaultLocale: "ja" },
